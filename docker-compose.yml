@@ -1,0 +1,9 @@
+services:
+  azuredevops_streamlit:
+    build: .
+    container_name: azuredevops_streamlit
+    restart: unless-stopped
+    environment:
+      - STREAMLIT_SERVER_PORT=5000 # Do not use 3000
+    ports:
+      - 5000:5000
